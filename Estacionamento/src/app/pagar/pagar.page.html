@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pagar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+{{load()}}
+
+<ion-content class="home" padding>    
+    <!--<h3 class="valor_ticket">{{ticket.numero}}</h3>--> 
+    <ion-item>                                                                    
+        <ion-label position="stacked" >Data</ion-label>                                
+        <ion-datetime display-format="DD MMM, YYYY" placeholder="Digite o horário de entrada" [(ngModel)]="data"></ion-datetime>                                  
+      </ion-item>                                           
+    <ion-item>                                                                    
+      <ion-label position="stacked" >Entrada</ion-label>                                
+      <ion-datetime display-format="HH:mm" placeholder="Digite o horário de entrada" [(ngModel)]="hrEntrada"></ion-datetime>                                  
+    </ion-item>  
+    <ion-item>                                                                    
+        <ion-label position="stacked" >Saída</ion-label>                                
+        <ion-datetime display-format="HH:mm" placeholder="Digite o horário de saida" [(ngModel)]="hrSaida"></ion-datetime>                                  
+      </ion-item>              
+    <ion-button color="primary" float-right (click)="pagar()">Pagar</ion-button>                                                
+  </ion-content>

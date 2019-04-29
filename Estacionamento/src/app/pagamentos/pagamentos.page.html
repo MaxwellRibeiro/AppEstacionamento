@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pagamentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+{{load()}}
+
+<ion-content>
+
+    <ion-card *ngFor="let ticket of tickets">
+        <ion-card-header>
+          <ion-card-subtitle>Situação: Pago</ion-card-subtitle>
+          <ion-card-title>Código do ticket: {{ticket.numero}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+            <ion-label>Data: {{ticket.data}}</ion-label><br/>
+            <ion-label>Hr. Entrada - Hr. Saida: {{ticket.hrEntrada}} - {{ticket.hrSaida}}</ion-label><br/>
+            <ion-label>Hr. Total: {{ticket.hrTotal}}</ion-label><br/>
+            <ion-label>Valor Pago: {{ticket.valorTotal}}</ion-label>
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>
